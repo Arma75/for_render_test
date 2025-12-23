@@ -22,12 +22,14 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-webmvc'
 	testImplementation 'org.springframework.boot:spring-boot-starter-webmvc-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+	// JDBC 도구 추가
+    implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+	
+	// PostgreSQL 드라이버
+    runtimeOnly 'org.postgresql:postgresql'
 }
 
 tasks.named('test') {
 	useJUnitPlatform()
-}
-
-jar {
-    enabled = false
 }
